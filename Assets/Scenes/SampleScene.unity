@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (2)
@@ -297,6 +301,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (4)
@@ -363,6 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (8)
@@ -424,6 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (7)
@@ -556,7 +572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360.8, y: 233.9}
+  m_AnchoredPosition: {x: -360.8, y: 236.5}
   m_SizeDelta: {x: 62.9134, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210093882
@@ -719,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 216.6}
+  m_AnchoredPosition: {x: -271, y: 220.8}
   m_SizeDelta: {x: 62.9134, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361200061
@@ -798,7 +814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -358.4, y: 199.4}
+  m_AnchoredPosition: {x: -358.4, y: 202.1}
   m_SizeDelta: {x: 62.9134, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409951712
@@ -1083,6 +1099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (11)
@@ -1276,6 +1296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (5)
@@ -1395,7 +1419,7 @@ Transform:
   m_GameObject: {fileID: 1121106686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -3.28, z: 0}
+  m_LocalPosition: {x: -1.677, y: -3.248, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1505,6 +1529,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (1)
@@ -1566,6 +1594,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (9)
@@ -1973,6 +2005,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (6)
@@ -2186,6 +2222,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (10)
@@ -2545,6 +2585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2485596789576667916, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 8716356801258483945, guid: a3640282a95f11c48ba52a16aacc30bd, type: 3}
     - target: {fileID: 3650386826605249484, guid: 0f15dd7f0f6f6d440a811e46679d2dde, type: 3}
       propertyPath: m_Name
       value: EmptyTower (3)

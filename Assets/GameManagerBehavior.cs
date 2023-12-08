@@ -12,7 +12,6 @@ public class GameManagerBehavior : MonoBehaviour
     public bool gameOver = false;
     private int wave;
     public Text healthLabel;
-    public GameObject[] healthIndicator;
     public int Wave
     {
         get
@@ -54,10 +53,7 @@ public class GameManagerBehavior : MonoBehaviour
         set
         {
             // 1
-            if (value < health)
-            {
-                //Camera.main.GetComponent<CameraShake>().Shake();
-            }
+            
             // 2
             health = value;
             healthLabel.text = "" + health;
@@ -65,21 +61,11 @@ public class GameManagerBehavior : MonoBehaviour
             if (health <= 0 && !gameOver)
             {
                 gameOver = true;
-                GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-                gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+                GameObject.FindGameObjectWithTag("GameOver").SetActive(true);
+                //gameOverText.SetActive(true);
             }
             // 4 
-            for (int i = 0; i < healthIndicator.Length; i++)
-            {
-                if (i < Health)
-                {
-                    healthIndicator[i].SetActive(true);
-                }
-                else
-                {
-                    healthIndicator[i].SetActive(false);
-                }
-            }
+            
         }
     }
     // Start is called before the first frame update

@@ -7,6 +7,8 @@ public class TowerLevel
 {
     public int cost;
     public GameObject visualization;
+    public GameObject bullet;
+    public float fireRate;
 }
 public class TowerData : MonoBehaviour
 {
