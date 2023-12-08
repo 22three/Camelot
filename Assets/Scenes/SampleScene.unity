@@ -2606,6 +2606,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b9f7f8d05a0f4eaeccb226077c5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waves:
+  - enemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
+    spawnInterval: 2.5
+    maxEnemies: 5
+  - enemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
+    spawnInterval: 2
+    maxEnemies: 10
+  - enemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
+    spawnInterval: 2
+    maxEnemies: 15
+  - enemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
+    spawnInterval: 1
+    maxEnemies: 5
+  timeBetweenWaves: 5
   testEnemyPrefab: {fileID: 197334, guid: 7ce36e6f76fd9454ba8205fc0504e11a, type: 3}
   waypoints:
   - {fileID: 183860892}
@@ -2616,20 +2630,6 @@ MonoBehaviour:
   - {fileID: 2034318886}
   - {fileID: 1375722276}
   - {fileID: 1331013334}
-  waves:
-  - enemyPrefab: {fileID: 197334, guid: 7ce36e6f76fd9454ba8205fc0504e11a, type: 3}
-    spawnInterval: 2.5
-    maxEnemies: 5
-  - enemyPrefab: {fileID: 197334, guid: 7ce36e6f76fd9454ba8205fc0504e11a, type: 3}
-    spawnInterval: 2
-    maxEnemies: 10
-  - enemyPrefab: {fileID: 197334, guid: 7ce36e6f76fd9454ba8205fc0504e11a, type: 3}
-    spawnInterval: 2
-    maxEnemies: 15
-  - enemyPrefab: {fileID: 197334, guid: 7ce36e6f76fd9454ba8205fc0504e11a, type: 3}
-    spawnInterval: 1
-    maxEnemies: 5
-  timeBetweenWaves: 5
 --- !u!1001 &2075911516568672601
 PrefabInstance:
   m_ObjectHideFlags: 0

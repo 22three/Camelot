@@ -11,8 +11,6 @@ public class Wave
 }
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject testEnemyPrefab;
-    public GameObject[] waypoints;
     public Wave[] waves;
     public int timeBetweenWaves = 5;
 
@@ -20,6 +18,9 @@ public class SpawnEnemy : MonoBehaviour
 
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
+    public GameObject testEnemyPrefab;
+    public GameObject[] waypoints;
+    
     // Start is called before the first frame update
     void Start()
     {
