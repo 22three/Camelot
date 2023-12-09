@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Start : MonoBehaviour
+public class GuidePlay : MonoBehaviour
 {
     // Start is called before the first frame update
     void OnMouseUp()
     {
         Debug.Log("Lalala");
-        SceneManager.LoadScene("Guide");
+        SceneManager.LoadScene("LoadingScene");
     }
 
 }
