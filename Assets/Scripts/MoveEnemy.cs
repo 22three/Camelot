@@ -14,20 +14,20 @@ public class MoveEnemy : MonoBehaviour
     {
         lastWaypointSwitchTime = Time.time;
     }
-    private void RotateIntoMoveDirection()
-    {
-        //1
-        Vector3 newStartPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 newEndPosition = waypoints[currentWaypoint + 1].transform.position;
-        Vector3 newDirection = (newEndPosition - newStartPosition);
-        //2
-        float x = newDirection.x;
-        float y = newDirection.y;
-        float rotationAngle = Mathf.Atan2(y, x) * 180 / Mathf.PI;
-        //3
-        GameObject sprite = gameObject.transform.Find("Sprite").gameObject;
-        sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
-    }
+    //private void RotateIntoMoveDirection()
+    //{
+    //    //1
+    //    Vector3 newStartPosition = waypoints[currentWaypoint].transform.position;
+    //    Vector3 newEndPosition = waypoints[currentWaypoint + 1].transform.position;
+    //    Vector3 newDirection = (newEndPosition - newStartPosition);
+    //    //2
+    //    float x = newDirection.x;
+    //    float y = newDirection.y;
+    //    float rotationAngle = Mathf.Atan2(y, x) * 180 / Mathf.PI;
+    //    //3
+    //    GameObject sprite = gameObject.transform.Find("Sprite").gameObject;
+    //    sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
+    //}
     public float DistanceToGoal()
     {
         float distance = 0;
@@ -45,7 +45,7 @@ public class MoveEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotateIntoMoveDirection();
+        //RotateIntoMoveDirection();
         // 1 
         Vector3 startPosition = waypoints[currentWaypoint].transform.position;
         Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;

@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class Wave
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     public float spawnInterval = 2;
     public int maxEnemies = 20;
 }
@@ -18,7 +19,6 @@ public class SpawnEnemy : MonoBehaviour
 
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
-    public GameObject testEnemyPrefab;
     public GameObject[] waypoints;
     
     // Start is called before the first frame update
@@ -28,10 +28,11 @@ public class SpawnEnemy : MonoBehaviour
         gameManager =
             GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
     }
-
+    public int i = 0;
     // Update is called once per frame
     void Update()
     {
+        
         // 1
         int currentWave = gameManager.Wave;
         if (currentWave < waves.Length)
@@ -43,12 +44,25 @@ public class SpawnEnemy : MonoBehaviour
                  timeInterval > spawnInterval) &&
                 enemiesSpawned < waves[currentWave].maxEnemies)
             {
-                // 3  
-                lastSpawnTime = Time.time;
-                GameObject newEnemy = (GameObject)
-                    Instantiate(waves[currentWave].enemyPrefab);
-                newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
-                enemiesSpawned++;
+                if (waves[currentWave].enemyPrefab.Length > i)
+                {
+                    lastSpawnTime = Time.time;
+                    GameObject newEnemy = (GameObject)
+                        Instantiate(waves[currentWave].enemyPrefab[i]);
+                    newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
+                    enemiesSpawned++;
+                    
+                }
+                else
+                {
+                    i = 0;
+                    lastSpawnTime = Time.time;
+                    GameObject newEnemy = (GameObject)
+                        Instantiate(waves[currentWave].enemyPrefab[i]);
+                    newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
+                    enemiesSpawned++;
+                }
+                i++;
             }
             // 4 
             if (enemiesSpawned == waves[currentWave].maxEnemies &&

@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
     {
         (ScriptDeactivator.GetComponent(scr) as MonoBehaviour).enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("i'am chort golimiy");
     }
     // Start is called before the first frame update
     void Start()
