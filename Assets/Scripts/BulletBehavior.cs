@@ -7,6 +7,7 @@ public class BulletBehavior : MonoBehaviour
     public float speed = 10;
     public int damage;
     public GameObject target;
+    public TextMesh BulletDmg;
     public Vector3 startPosition;
     public Vector3 targetPosition;
 
@@ -32,7 +33,8 @@ public class BulletBehavior : MonoBehaviour
         gameObject.transform.rotation = Quaternion.AngleAxis(
             Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI,
             new Vector3(0, 0, 1));
-
+        //int plusdmg = int.Parse(BulletDmg.text);
+        int plusdmg = 0;
         // 2 
         if (gameObject.transform.position.Equals(targetPosition))
         {
@@ -42,7 +44,7 @@ public class BulletBehavior : MonoBehaviour
                 Transform healthBarTransform = target.transform.Find("HealthBar");
                 HealthBar healthBar =
                     healthBarTransform.gameObject.GetComponent<HealthBar>();
-                healthBar.currentHealth -= Mathf.Max(damage, 0);
+                healthBar.currentHealth -= Mathf.Max(damage, 0) + plusdmg;
                 // 4
                 if (healthBar.currentHealth <= 0)
                 {

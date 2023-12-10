@@ -6,6 +6,7 @@ public class GameManagerBehavior : MonoBehaviour
 {
     public GameObject GameOverTitle;
     public GameObject RestartButton;
+    public GameObject ExitButton;
     public TextMesh waveLabel;
     public GameObject nextWaveLabels;
     public TextMesh goldLabel;
@@ -82,7 +83,7 @@ public class GameManagerBehavior : MonoBehaviour
     {
         Health = 5;
         Wave = 0;
-        Gold = 1000;
+        Gold = 270;
     }
 
     void Deactiv()
@@ -93,6 +94,7 @@ public class GameManagerBehavior : MonoBehaviour
     {
         GameOverTitle.SetActive(true);
         RestartButton.SetActive(true);
+        ExitButton.SetActive(true);
         gameOver = true;
         (ScriptDeactivator.GetComponent(scr) as MonoBehaviour).enabled = false;
     }

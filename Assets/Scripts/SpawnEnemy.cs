@@ -13,6 +13,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     public GameObject YouWinTitle;
     public GameObject ExitButton;
+    public GameObject Boss;
     public Wave[] waves;
     public int timeBetweenWaves = 5;
 
@@ -47,6 +48,10 @@ public class SpawnEnemy : MonoBehaviour
             {
                 if (waves[currentWave].enemyPrefab.Length > i)
                 {
+                    if (currentWave+1 == waves.Length)
+                    {
+                        Boss.SetActive(false);
+                    }
                     lastSpawnTime = Time.time;
                     GameObject newEnemy = (GameObject)
                         Instantiate(waves[currentWave].enemyPrefab[i]);
@@ -56,6 +61,10 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 else
                 {
+                    if (currentWave + 1 == waves.Length)
+                    {
+                        Boss.SetActive(false);
+                    }
                     i = 0;
                     lastSpawnTime = Time.time;
                     GameObject newEnemy = (GameObject)
