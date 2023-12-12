@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class ExitInLVL : MonoBehaviour
 {
-    
     public GameObject PauseMenu;
-    public void OnMouseUp()
+    void OnMouseUp()
     {
         PauseMenu.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadScene("Menu");
     }
     // Start is called before the first frame update
     void Start()

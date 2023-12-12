@@ -125,7 +125,7 @@ public class GameManagerBehavior : MonoBehaviour
     {
         Health = 5;
         Wave = 0;
-        Gold = 270;
+        Gold = 400;
         BulletDMG = 0;
         BulletSPD = 0;
         BulletRNG = 0;
@@ -140,7 +140,7 @@ public class GameManagerBehavior : MonoBehaviour
         GameOverTitle.SetActive(true);
         Res.SetActive(true);
         gameOver = true;
-        (ScriptDeactivator.GetComponent(scr) as MonoBehaviour).enabled = false;
+        Time.timeScale = 0;
     }
     // Update is called once per frame
     void Update()
