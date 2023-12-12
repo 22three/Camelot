@@ -7,6 +7,8 @@ public class ShootEnemies : MonoBehaviour
     private float lastShotTime;
     private TowerData towerData;
     public List<GameObject> enemiesInRange;
+    private GameManagerBehavior gameManager;
+    private CircleCollider2D circleCollider;
     // 1
     void OnEnemyDestroy(GameObject enemy)
     {
@@ -25,6 +27,7 @@ public class ShootEnemies : MonoBehaviour
         }
     }
     // 3
+    // 3
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("Enemy"))
@@ -38,6 +41,8 @@ public class ShootEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject gm = GameObject.Find("GameManager");
+        gameManager = gm.GetComponent<GameManagerBehavior>();
         enemiesInRange = new List<GameObject>();
         lastShotTime = Time.time;
         towerData = gameObject.GetComponentInChildren<TowerData>();
@@ -70,6 +75,9 @@ public class ShootEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        circleCollider = GetComponent<CircleCollider2D>();
+        circleCollider.radius = circleCollider.radius + (gameManager.BulletRNG * 0.001f);
+        //this.CircleCollider2D.radius += gameManager.BulletRNG * 0.1;
         GameObject target = null;
         // 1
         float minimalEnemyDistance = float.MaxValue;
@@ -85,7 +93,7 @@ public class ShootEnemies : MonoBehaviour
         // 2
         if (target != null)
         {
-            if (Time.time - lastShotTime > towerData.CurrentLevel.fireRate)
+            if (Time.time - lastShotTime > towerData.CurrentLevel.fireRate - (gameManager.BulletSPD*0.01))
             {
                 Shoot(target.GetComponent<Collider2D>());
                 lastShotTime = Time.time;

@@ -5,8 +5,7 @@ using UnityEngine;
 public class GameManagerBehavior : MonoBehaviour
 {
     public GameObject GameOverTitle;
-    public GameObject RestartButton;
-    public GameObject ExitButton;
+    public GameObject Res;
     public TextMesh waveLabel;
     public GameObject nextWaveLabels;
     public TextMesh goldLabel;
@@ -139,8 +138,7 @@ public class GameManagerBehavior : MonoBehaviour
     public void GameOver()
     {
         GameOverTitle.SetActive(true);
-        RestartButton.SetActive(true);
-        ExitButton.SetActive(true);
+        Res.SetActive(true);
         gameOver = true;
         (ScriptDeactivator.GetComponent(scr) as MonoBehaviour).enabled = false;
     }

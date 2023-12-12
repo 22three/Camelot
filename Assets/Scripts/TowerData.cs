@@ -12,6 +12,7 @@ public class TowerLevel
 }
 public class TowerData : MonoBehaviour
 {
+    
     public List<TowerLevel> levels;
     private TowerLevel currentLevel;
     public TowerLevel CurrentLevel
@@ -73,7 +74,7 @@ public class TowerData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

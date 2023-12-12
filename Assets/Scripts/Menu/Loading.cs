@@ -13,7 +13,7 @@ public class Loading : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Loading1", 1);
+        Invoke("Loading1", 0.2f);
     }
     void Loading0()
     {
@@ -21,7 +21,7 @@ public class Loading : MonoBehaviour
         loading1.SetActive(false);
         loading2.SetActive(false);
         loading3.SetActive(false);
-        Invoke("Loading1", 1);
+        Invoke("Loading1", 0.2f);
         load++;
         if (load == 20)
         {
@@ -34,7 +34,7 @@ public class Loading : MonoBehaviour
         loading1.SetActive(true);
         loading2.SetActive(false);
         loading3.SetActive(false);
-        Invoke("Loading2",1);
+        Invoke("Loading2", 0.2f);
         load++;
         if (load == 20)
         {
@@ -47,9 +47,9 @@ public class Loading : MonoBehaviour
         loading1.SetActive(false);
         loading2.SetActive(true);
         loading3.SetActive(false);
-        Invoke("Loading3", 1);
+        Invoke("Loading3", 0.2f);
         load++;
-        if(load == 6)
+        if(load == 20)
         {
             SceneManager.LoadScene("SampleScene");
         }
@@ -60,9 +60,9 @@ public class Loading : MonoBehaviour
         loading1.SetActive(false);
         loading2.SetActive(false);
         loading3.SetActive(true);
-        Invoke("Loading0", 1);
+        Invoke("Loading0", 0.2f);
         load++;
-        if (load == 6)
+        if (load == 20)
         {
             SceneManager.LoadScene("SampleScene");
         }

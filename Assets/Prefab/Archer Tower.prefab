@@ -406,11 +406,11 @@ MonoBehaviour:
   - cost: 120
     visualization: {fileID: 4799323252730955525}
     bullet: {fileID: 104348, guid: e14f3a540bc1d4ae3b4e01a5a81e704a, type: 3}
-    fireRate: 0.5
-  - cost: 109
+    fireRate: 0.95
+  - cost: 110
     visualization: {fileID: 4933129154511717721}
     bullet: {fileID: 104348, guid: 44283c548f1b3024b9a8e65f2a66c79a, type: 3}
-    fireRate: 0.25
+    fireRate: 0.85
 --- !u!58 &-2889490202481395408
 CircleCollider2D:
   m_ObjectHideFlags: 0
