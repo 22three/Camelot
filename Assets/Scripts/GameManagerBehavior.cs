@@ -10,12 +10,19 @@ public class GameManagerBehavior : MonoBehaviour
     public TextMesh waveLabel;
     public GameObject nextWaveLabels;
     public TextMesh goldLabel;
-    private int gold;
+    public TextMesh bulletDMG;
+    public TextMesh bulletSPD;
+    public TextMesh bulletRNG;
+    public int DMG;
+    public int SPD;
+    public int RNG;
+    public int gold;
     public bool gameOver = false;
     private int wave;
     public TextMesh healthLabel;
     public GameObject ScriptDeactivator;
     public string scr;
+
     public int Wave
     {
         get
@@ -35,6 +42,42 @@ public class GameManagerBehavior : MonoBehaviour
                 }
             }
             waveLabel.text = "" + (wave + 1);
+        }
+    }
+    public int BulletDMG
+    {
+        get
+        {
+            return DMG;
+        }
+        set
+        {
+            DMG = value;
+            bulletDMG.text = "" + DMG;
+        }
+    }
+    public int BulletSPD
+    {
+        get
+        {
+            return SPD;
+        }
+        set
+        {
+            SPD = value;
+            bulletSPD.text = "" + SPD;
+        }
+    }
+    public int BulletRNG
+    {
+        get
+        {
+            return RNG;
+        }
+        set
+        {
+            RNG = value;
+            bulletRNG.text = "" + RNG;
         }
     }
     public int Gold
@@ -84,6 +127,9 @@ public class GameManagerBehavior : MonoBehaviour
         Health = 5;
         Wave = 0;
         Gold = 270;
+        BulletDMG = 0;
+        BulletSPD = 0;
+        BulletRNG = 0;
     }
 
     void Deactiv()

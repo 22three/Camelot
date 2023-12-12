@@ -3,7 +3,10 @@ guid: 997ad1f6b007a5042b43f3472a27df9f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - target: {instanceID: 0}
+  - waveLabel: {instanceID: 0}
+  - BulletDmg: {fileID: 3759825105789787031, guid: 606eaa77c9a6f35449014614d378a09d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

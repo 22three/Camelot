@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
+    private GameManagerBehavior gameManager;
+    private UpgrdDmg upgrdDmg;
     public float speed = 10;
     public int damage;
     public GameObject target;
-    public TextMesh BulletDmg;
+    //public UpgrdDmg upgrdDmg;
     public Vector3 startPosition;
     public Vector3 targetPosition;
 
     private float distance;
     private float startTime;
-
-    private GameManagerBehavior gameManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +29,14 @@ public class BulletBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int plusdmg = gameManager.BulletDMG;
         float timeInterval = Time.time - startTime;
         gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, timeInterval * speed / distance);
         Vector3 direction = gameObject.transform.position - target.transform.position;
         gameObject.transform.rotation = Quaternion.AngleAxis(
             Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI,
             new Vector3(0, 0, 1));
-        //int plusdmg = int.Parse(BulletDmg.text);
-        int plusdmg = 0;
+        
         // 2 
         if (gameObject.transform.position.Equals(targetPosition))
         {
