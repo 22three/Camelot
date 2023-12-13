@@ -24028,20 +24028,30 @@ MonoBehaviour:
   - enemyPrefab:
     - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
     spawnInterval: 2
-    maxEnemies: 2
+    maxEnemies: 3
   - enemyPrefab:
-    - {fileID: 204294657952424300, guid: 48b11aa5fd3ed28488fe30fb3443cf8e, type: 3}
+    - {fileID: 204294657952424300, guid: 6bb5bca2b014595439460b674372de23, type: 3}
+    spawnInterval: 2
+    maxEnemies: 3
+  - enemyPrefab:
+    - {fileID: 204294657952424300, guid: 6bb5bca2b014595439460b674372de23, type: 3}
     - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
     spawnInterval: 2
     maxEnemies: 10
   - enemyPrefab:
     - {fileID: 204294657952424300, guid: 48b11aa5fd3ed28488fe30fb3443cf8e, type: 3}
-    spawnInterval: 2
-    maxEnemies: 15
-  - enemyPrefab:
-    - {fileID: 204294657952424300, guid: 48b11aa5fd3ed28488fe30fb3443cf8e, type: 3}
     spawnInterval: 1
     maxEnemies: 15
+  - enemyPrefab:
+    - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
+    spawnInterval: 1
+    maxEnemies: 30
+  - enemyPrefab:
+    - {fileID: 204294657952424300, guid: 6bb5bca2b014595439460b674372de23, type: 3}
+    - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
+    - {fileID: 204294657952424300, guid: 48b11aa5fd3ed28488fe30fb3443cf8e, type: 3}
+    spawnInterval: 1
+    maxEnemies: 30
   - enemyPrefab:
     - {fileID: 204294657952424300, guid: 48b11aa5fd3ed28488fe30fb3443cf8e, type: 3}
     - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
