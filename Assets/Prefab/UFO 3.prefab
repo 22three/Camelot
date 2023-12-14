@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4057712705814693810}
   - component: {fileID: 3551413391405760130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8589734983923093254}
   - component: {fileID: 5606974470845243687}
   - component: {fileID: 3385739115125991023}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UFO 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 1770078953849361104}
   - component: {fileID: 1615049014471073721}
   - component: {fileID: 1027756941051941108}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 4399642014174096202}
   - component: {fileID: 340644747280115580}
   - component: {fileID: 911366062046202175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

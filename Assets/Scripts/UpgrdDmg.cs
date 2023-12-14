@@ -42,8 +42,8 @@ public class UpgrdDmg : MonoBehaviour
         {
             int cost = int.Parse(Cost.text);
 
-            //AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-            //audioSource.PlayOneShot(audioSource.clip);
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(audioSource.clip);
             gameManager.BulletDMG += 1;
             gameManager.Gold -= cost;
             int newcost = cost + 10;
