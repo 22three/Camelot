@@ -24506,7 +24506,7 @@ MonoBehaviour:
     spawnInterval: 1
     maxEnemies: 10
   - enemyPrefab:
-    - {fileID: 204294657952424300, guid: 3971e6839c7cc31448d5371d3d91d4e9, type: 3}
+    - {fileID: 204294657952424300, guid: 42939aea196a29e48b0edfefbf15ec94, type: 3}
     spawnInterval: 1
     maxEnemies: 15
   - enemyPrefab:
