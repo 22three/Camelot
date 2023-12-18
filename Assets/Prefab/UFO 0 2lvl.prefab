@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5606974470845243687}
   - component: {fileID: 3385739115125991023}
   m_Layer: 2
-  m_Name: UFO 2lvl
+  m_Name: UFO 0 2lvl
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee7e0268b33b984680ef82d7128b313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  currentHealth: 200
+  maxHealth: 180
+  currentHealth: 180
 --- !u!1 &6416364978953449708
 GameObject:
   m_ObjectHideFlags: 0

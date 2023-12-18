@@ -51,8 +51,8 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - 6a45b7e3bf6af254ca2600e382327474
-    - a462c1292d1c501459d952d224425619
     - 560efd2450455ee4d9e8b7305234bc89
+    - a462c1292d1c501459d952d224425619
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -66,8 +66,8 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 6a45b7e3bf6af254ca2600e382327474
   m_Children:
-  - {fileID: 5969019176040419640}
   - {fileID: 4712046412784691692}
+  - {fileID: 5969019176040419640}
   m_Volume: 0b18492c3702a314faccb493bcdf0556
   m_Pitch: 578be20fc67584f47b6ff49c35e6a659
   m_Send: 00000000000000000000000000000000

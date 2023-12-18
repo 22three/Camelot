@@ -7,27 +7,34 @@ using UnityEngine.UI;
 public class Music : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public Voice gameManager;
     public AudioMixer am;
-    public bool volume = true;
+    
     public GameObject on;
     public GameObject off;
+    void Start()
+    {
+        GameObject gm = GameObject.Find("GameManager");
+        gameManager = gm.GetComponent<Voice>();
+    }
     // Start is called before the first frame update
     void OnMouseUp()
     {
-        if (volume == true)
+        if (gameManager.musicvolume == true)
         {
             am.SetFloat("Music", -80.0f);
-            volume = false;
+            gameManager.musicvolume = false;
             on.SetActive(false);
             off.SetActive(true);
         }
-        else if (volume == false)
+        else if (gameManager.musicvolume == false )
         {
             am.SetFloat("Music", 0);
-            volume = true;
+            gameManager.musicvolume = true;
             on.SetActive(true);
             off.SetActive(false);
         }
+        
     }
+    
 }
