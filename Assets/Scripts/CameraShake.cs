@@ -4,54 +4,52 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
 
-    public float shakeDecayStart = 0.002f;
-    public float shakeIntensityStart = 0.03f;
-
-    private float shakeDecay;
-    private float shakeIntensity;
-
-    private Vector3 originPosition;
-    private Quaternion originRotation;
-    private bool shaking;
-    private Transform transformAtOrigin;
+    public float _shakeDecayStart = 0.002f;
+    public float _shakeIntensityStart = 0.03f;
+    private float _shakeDecay;
+    private float _shakeIntensity;
+    private Vector3 _originPosition;
+    private Quaternion _originRotation;
+    private bool _shaking;
+    private Transform _transformAtOrigin;
 
     void OnEnable()
     {
-        transformAtOrigin = transform;
+        _transformAtOrigin = transform;
     }
 
     void Update()
     {
-        if (!shaking)
+        if (!_shaking)
             return;
-        if (shakeIntensity > 0f)
+        if (_shakeIntensity > 0f)
         {
-            transformAtOrigin.localPosition = originPosition + Random.insideUnitSphere * shakeIntensity;
-            transformAtOrigin.localRotation = new Quaternion(
-                originRotation.x + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
-                originRotation.y + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
-                originRotation.z + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
-                originRotation.w + Random.Range(-shakeIntensity, shakeIntensity) * .2f);
-            shakeIntensity -= shakeDecay;
+            _transformAtOrigin.localPosition = _originPosition + Random.insideUnitSphere * _shakeIntensity;
+            _transformAtOrigin.localRotation = new Quaternion(
+                _originRotation.x + Random.Range(-_shakeIntensity, _shakeIntensity) * .2f,
+                _originRotation.y + Random.Range(-_shakeIntensity, _shakeIntensity) * .2f,
+                _originRotation.z + Random.Range(-_shakeIntensity, _shakeIntensity) * .2f,
+                _originRotation.w + Random.Range(-_shakeIntensity, _shakeIntensity) * .2f);
+            _shakeIntensity -= _shakeDecay;
         }
         else
         {
-            shaking = false;
-            transformAtOrigin.localPosition = originPosition;
-            transformAtOrigin.localRotation = originRotation;
+            _shaking = false;
+            _transformAtOrigin.localPosition = _originPosition;
+            _transformAtOrigin.localRotation = _originRotation;
         }
     }
 
     public void Shake()
     {
-        if (!shaking)
+        if (!_shaking)
         {
-            originPosition = transformAtOrigin.localPosition;
-            originRotation = transformAtOrigin.localRotation;
+            _originPosition = _transformAtOrigin.localPosition;
+            _originRotation = _transformAtOrigin.localRotation;
         }
-        shaking = true;
-        shakeDecay = shakeDecayStart;
-        shakeIntensity = shakeIntensityStart;
+        _shaking = true;
+        _shakeDecay = _shakeDecayStart;
+        _shakeIntensity = _shakeIntensityStart;
     }
 
 }

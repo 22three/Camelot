@@ -6,33 +6,29 @@ using UnityEngine.Audio;
 public class Volume : MonoBehaviour
 {
     
-    public AudioMixer am;
-    public GameObject on;
-    public GameObject off;
-    public Voice gameManager;
+    [SerializeField]private AudioMixer audioMixer;
+    [SerializeField]private GameObject onButton;
+    [SerializeField]private GameObject offButton;
+    [SerializeField]private Voice sound;
     
     void Start()
     {
-        GameObject gm = GameObject.Find("GameManager");
-        gameManager = gm.GetComponent<Voice>();
+        GameObject gameManager = GameObject.Find("GameManager");
+        sound = gameManager.GetComponent<Voice>();
     }
-    // Start is called before the first frame update
+    
     void OnMouseUp()
     {
-        if (gameManager.volume == true)
-        {
-            
-            am.SetFloat("MyExposedParam", -80.0f);
-            gameManager.volume = false;
-            on.SetActive(false);
-            off.SetActive(true);
-        }
-        else if (gameManager.volume == false)
-        {
-            am.SetFloat("MyExposedParam", 0);
-            gameManager.volume = true;
-            on.SetActive(true);
-            off.SetActive(false);
-        }
+        SpeakVolume(!sound.volume);         
     }
+
+    void SpeakVolume(bool status) 
+    {
+        float value = status == false ? - 80.0f : 0;
+        audioMixer.SetFloat("MyExposedParam", value);
+        sound.volume = status;
+        onButton.SetActive(status);
+        offButton.SetActive(!status);
+    }
+
 }

@@ -6,35 +6,28 @@ using UnityEngine.UI;
 
 public class Music : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Voice gameManager;
-    public AudioMixer am;
-    
-    public GameObject on;
-    public GameObject off;
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private GameObject onButton;
+    [SerializeField] private GameObject offButton;
+    [SerializeField] private Voice sound;
+
     void Start()
     {
-        GameObject gm = GameObject.Find("GameManager");
-        gameManager = gm.GetComponent<Voice>();
+        GameObject gameManager = GameObject.Find("GameManager");
+        sound = gameManager.GetComponent<Voice>();
     }
-    // Start is called before the first frame update
+
     void OnMouseUp()
     {
-        if (gameManager.musicvolume == true)
-        {
-            am.SetFloat("Music", -80.0f);
-            gameManager.musicvolume = false;
-            on.SetActive(false);
-            off.SetActive(true);
-        }
-        else if (gameManager.musicvolume == false )
-        {
-            am.SetFloat("Music", 0);
-            gameManager.musicvolume = true;
-            on.SetActive(true);
-            off.SetActive(false);
-        }
-        
+        SpeakVolume(!sound.volume);
     }
-    
+
+    void SpeakVolume(bool status)
+    {
+        float value = status == false ? -80.0f : 0;
+        audioMixer.SetFloat("MyExposedParam", value);
+        sound.musicvolume = status;
+        onButton.SetActive(status);
+        offButton.SetActive(!status);
+    }
 }

@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa9ca2b8b9f1f44386e071d22ad2fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  am: {fileID: 24100000, guid: 6b1f711d189f65745b5cb4679513dcb3, type: 2}
-  on: {fileID: 1468846518}
-  off: {fileID: 267125956}
-  gameManager: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 6b1f711d189f65745b5cb4679513dcb3, type: 2}
+  onButton: {fileID: 1468846518}
+  offButton: {fileID: 267125956}
+  sound: {fileID: 871380176}
 --- !u!61 &91682090
 BoxCollider2D:
   m_ObjectHideFlags: 0

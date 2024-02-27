@@ -12,15 +12,4 @@ public class ExitInLVL : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
