@@ -261,9 +261,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3146860722204255765}
+  - component: {fileID: -2889490202481395408}
   - component: {fileID: 5776669023402720474}
   - component: {fileID: 9178777834851878593}
-  - component: {fileID: -2889490202481395408}
   - component: {fileID: 1889931913839314362}
   m_Layer: 2
   m_Name: Archer Tower
@@ -290,6 +290,41 @@ Transform:
   - {fileID: 8180294129826242844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &-2889490202481395408
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716356801258483945}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!82 &5776669023402720474
 AudioSource:
   m_ObjectHideFlags: 0
@@ -411,41 +446,6 @@ MonoBehaviour:
     visualization: {fileID: 4933129154511717721}
     bullet: {fileID: 104348, guid: 44283c548f1b3024b9a8e65f2a66c79a, type: 3}
     fireRate: 0.85
---- !u!58 &-2889490202481395408
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8716356801258483945}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!114 &1889931913839314362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,5 +458,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caac6fb89288754c85dac699cc8d64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesInRange:
+  _enemiesInRange:
   - {fileID: 0}

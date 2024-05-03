@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class GameManagerBehavior : MonoBehaviour
 {
-    public GameObject GameOverTitle;
-    public GameObject Res;
-    public TextMesh waveLabel;
-    public GameObject nextWaveLabels;
-    public TextMesh goldLabel;
-    public TextMesh bulletDMG;
-    public TextMesh bulletSPD;
-    public TextMesh bulletRNG;
-    public int DMG;
-    public int SPD;
-    public int RNG;
-    public int gold;
+    [SerializeField] private GameObject GameOverTitle;
+    [SerializeField] private GameObject Res;
+    [SerializeField] private TextMesh waveLabel;
+    [SerializeField] private GameObject nextWaveLabels;
+    [SerializeField] private TextMesh goldLabel;
+    [SerializeField] private TextMesh bulletDMG;
+    [SerializeField] private TextMesh bulletSPD;
+    [SerializeField] private TextMesh bulletRNG;
+    private int DMG;
+    private int SPD;
+    private int RNG;
+    private int gold;
     public bool gameOver = false;
     private int wave;
-    public TextMesh healthLabel;
-    public GameObject ScriptDeactivator;
-    public string scr;
+    [SerializeField] private TextMesh healthLabel;
+    [SerializeField] private GameObject ScriptDeactivator;
+    [SerializeField] private string scr;
 
     public int Wave
     {
@@ -100,27 +100,13 @@ public class GameManagerBehavior : MonoBehaviour
         }
         set
         {
-            // 1
-            
-            // 2
             health = value;
             healthLabel.text = "" + health;
-            // 3
             if (health <= 0 && !gameOver)
-            {
-                GameOver();
-                
-                //myObj.SetActive(true);
-
-                
-                //GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-                //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
-            }
-            // 4 
-            
+                GameOver();         
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         Health = 5;
@@ -142,7 +128,7 @@ public class GameManagerBehavior : MonoBehaviour
         gameOver = true;
         Time.timeScale = 0;
     }
-    // Update is called once per frame
+
     void Update()
     {
 

@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24014312}
-  - component: {fileID: 24014311}
+  - component: {fileID: 24014313}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -586,7 +586,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &24014311
+--- !u!4 &24014312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24014310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.3268385, y: 2.8330681, z: -3.212981}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24014313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -614,21 +629,6 @@ MonoBehaviour:
   healthLabel: {fileID: 1579906257}
   ScriptDeactivator: {fileID: 2115020872}
   scr: SpawnEnemy
---- !u!4 &24014312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24014310}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3268385, y: 2.8330681, z: -3.212981}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &33965527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8625,7 +8625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc2f87b6c523b34584d6780ac2ef34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 24014311}
+  gameManager: {fileID: 0}
   Gold: {fileID: 1378608192}
   Cost: {fileID: 1957034934}
   DMG: 0
@@ -20016,7 +20016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdbefce25476a5a48990b9191e64d098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 24014311}
+  gameManager: {fileID: 0}
   Gold: {fileID: 1378608192}
   Cost: {fileID: 1288273243}
   RNG: 0
@@ -23969,7 +23969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2266480226dc8418a4bd814106700f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 24014311}
+  gameManager: {fileID: 0}
   Gold: {fileID: 1378608192}
   Cost: {fileID: 853932985}
   SPD: 0

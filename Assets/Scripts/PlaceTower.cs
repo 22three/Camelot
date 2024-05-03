@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlaceTower : MonoBehaviour
 {
     private GameManagerBehavior gameManager;
-    public GameObject towerPrefab;
+    [SerializeField] private GameObject towerPrefab;
     private GameObject tower;
     private bool CanPlaceMonster()
     {
@@ -47,10 +47,7 @@ public class PlaceTower : MonoBehaviour
         return false;
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
-    }
+    void Start() => gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
 
     // Update is called once per frame
     void Update()
