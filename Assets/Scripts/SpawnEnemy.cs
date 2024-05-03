@@ -11,19 +11,16 @@ public class Wave
 }
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject YouWinTitle;
-    public GameObject ExitButton;
-    public GameObject Boss;
-    public Wave[] waves;
-    public int timeBetweenWaves = 5;
-
+    [SerializeField] private GameObject YouWinTitle;
+    [SerializeField] private GameObject ExitButton;
+    [SerializeField] private GameObject Boss;
+    [SerializeField] private Wave[] waves;
+    [SerializeField] private int timeBetweenWaves = 5;
     private GameManagerBehavior gameManager;
-
     private float lastSpawnTime;
     private int enemiesSpawned = 0;
-    public GameObject[] waypoints;
+    [SerializeField] private GameObject[] waypoints;
     
-    // Start is called before the first frame update
     void Start()
     {
         lastSpawnTime = Time.time;
@@ -31,7 +28,7 @@ public class SpawnEnemy : MonoBehaviour
             GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
     }
     public int i = 0;
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -83,7 +80,7 @@ public class SpawnEnemy : MonoBehaviour
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;
             }
-            // 5 
+            
         }
         else
         {
