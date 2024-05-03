@@ -621,10 +621,6 @@ MonoBehaviour:
   bulletDMG: {fileID: 2092438088}
   bulletSPD: {fileID: 1929474874}
   bulletRNG: {fileID: 637915670}
-  DMG: 0
-  SPD: 0
-  RNG: 0
-  gold: 0
   gameOver: 0
   healthLabel: {fileID: 1579906257}
   ScriptDeactivator: {fileID: 2115020872}
