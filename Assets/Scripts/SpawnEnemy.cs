@@ -31,12 +31,9 @@ public class SpawnEnemy : MonoBehaviour
     
     void Update()
     {
-        
-        // 1
         int currentWave = gameManager.Wave;
         if (currentWave < waves.Length)
         {
-            // 2
             float timeInterval = Time.time - lastSpawnTime;
             float spawnInterval = waves[currentWave].spawnInterval;
             if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
@@ -46,22 +43,17 @@ public class SpawnEnemy : MonoBehaviour
                 if (waves[currentWave].enemyPrefab.Length > i)
                 {
                     if (currentWave+1 == waves.Length)
-                    {
                         Boss.SetActive(false);
-                    }
                     lastSpawnTime = Time.time;
                     GameObject newEnemy = (GameObject)
                         Instantiate(waves[currentWave].enemyPrefab[i]);
                     newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
                     enemiesSpawned++;
-                    
                 }
                 else
                 {
                     if (currentWave + 1 == waves.Length)
-                    {
                         Boss.SetActive(false);
-                    }
                     i = 0;
                     lastSpawnTime = Time.time;
                     GameObject newEnemy = (GameObject)
@@ -71,7 +63,6 @@ public class SpawnEnemy : MonoBehaviour
                 }
                 i++;
             }
-            // 4 
             if (enemiesSpawned == waves[currentWave].maxEnemies &&
                 GameObject.FindGameObjectWithTag("Enemy") == null)
             {
@@ -80,7 +71,6 @@ public class SpawnEnemy : MonoBehaviour
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;
             }
-            
         }
         else
         {

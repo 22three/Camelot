@@ -15,8 +15,7 @@ public class BulletBehavior : MonoBehaviour
 
     private float _distance;
     private float _startTime;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         _startTime = Time.time;
@@ -25,7 +24,6 @@ public class BulletBehavior : MonoBehaviour
         gameManager = gm.GetComponent<GameManagerBehavior>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         int plusdmg = gameManager.BulletDMG;
@@ -35,18 +33,15 @@ public class BulletBehavior : MonoBehaviour
         gameObject.transform.rotation = Quaternion.AngleAxis(
             Mathf.Atan2(direction.y, direction.x) * 180 / Mathf.PI,
             new Vector3(0, 0, 1));
-        
-        // 2 
+
         if (gameObject.transform.position.Equals(targetPosition))
         {
             if (target != null)
             {
-                // 3
                 Transform healthBarTransform = target.transform.Find("HealthBar");
                 HealthBar healthBar =
                     healthBarTransform.gameObject.GetComponent<HealthBar>();
                 healthBar.currentHealth -= Mathf.Max(_damage, 0) + plusdmg;
-                // 4
                 if (healthBar.currentHealth <= 0)
                 {
                     Destroy(target);

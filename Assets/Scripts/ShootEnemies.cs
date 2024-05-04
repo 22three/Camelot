@@ -9,7 +9,7 @@ public class ShootEnemies : MonoBehaviour
     public List<GameObject> _enemiesInRange;
     private GameManagerBehavior _gameManagerBehavior;
     private CircleCollider2D _circleCollider;
-    // 1
+
     void OnEnemyDestroy(GameObject enemy)
     {
         _enemiesInRange.Remove(enemy);
@@ -48,13 +48,12 @@ public class ShootEnemies : MonoBehaviour
     void Shoot(Collider2D target)
     {
         GameObject bulletPrefab = _towerData.CurrentLevel.bullet;
-        // 1 
+
         Vector3 startPosition = gameObject.transform.position;
         Vector3 targetPosition = target.transform.position;
         startPosition.z = bulletPrefab.transform.position.z;
         targetPosition.z = bulletPrefab.transform.position.z;
 
-        // 2 
         GameObject newBullet = (GameObject)Instantiate(bulletPrefab);
         newBullet.transform.position = startPosition;
         BulletBehavior bulletComponent = newBullet.GetComponent<BulletBehavior>();
@@ -62,7 +61,6 @@ public class ShootEnemies : MonoBehaviour
         bulletComponent.startPosition = startPosition;
         bulletComponent.targetPosition = targetPosition;
 
-        // 3 
         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioSource.clip);
     }
@@ -72,7 +70,7 @@ public class ShootEnemies : MonoBehaviour
         _circleCollider = GetComponent<CircleCollider2D>();
         _circleCollider.radius = _circleCollider.radius + (_gameManagerBehavior.BulletRNG * 0.001f);
         GameObject target = null;
-        // 1
+
         float minimalEnemyDistance = float.MaxValue;
         foreach (GameObject enemy in _enemiesInRange)
         {
@@ -83,7 +81,7 @@ public class ShootEnemies : MonoBehaviour
                 minimalEnemyDistance = distanceToGoal;
             }
         }
-        // 2
+
         if (target != null)
         {
             if (Time.time - _lastShotTime > _towerData.CurrentLevel.fireRate - (_gameManagerBehavior.BulletSPD*0.01))
@@ -91,8 +89,6 @@ public class ShootEnemies : MonoBehaviour
                 Shoot(target.GetComponent<Collider2D>());
                 _lastShotTime = Time.time;
             }
-            // 3
-            
         }
     }
 }
